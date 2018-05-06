@@ -1,50 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
-	<meta charset="UTF-8">
-	<title>基础的Canvas</title>
+    <meta charset="UTF-8">
+    <title>封装绘制矩形方法</title>
 </head>
-
 <body>
-	<div id="canvas-warp">
-		<canvas id="canvas" style="border: 1px solid #AAA; display: block; margin: 50px auto;" width="800" height="600">
-			你的浏览器居然不支持Canvas？！赶快换一个吧！！
-		</canvas>
-	</div>
-	<script type="text/javascript">
-		window.onload = function(){
-			var canvas = document.getElementById("canvas");
-			var context = canvas.getContext("2d");
-			context.beginPath();
-			context.moveTo(100,100);
-			context.lineTo(300,300);
-			context.lineTo(100,500);
-			context.lineWidth = 5;
-			context.strokeStyle = "red";
-			context.stroke();
-			context.closePath();
+<div id="canvas-warp">
+    <canvas id="canvas" style="border: 1px solid #aaaaaa; display: block; margin: 50px auto;">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
 
-			context.beginPath();
-			context.moveTo(300,100);
-			context.lineTo(500,300);
-			context.lineTo(300,500);
-			context.lineWidth = 5;
-			context.strokeStyle = "blue";
-			context.stroke();
-			context.closePath();
-			
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
 
-			context.beginPath();
-			context.moveTo(500,100);
-			context.lineTo(700,300);
-			context.lineTo(500,500);
-			context.lineWidth = 5;
-			context.strokeStyle = "black";
-			context.stroke();
-			context.closePath();
+        drawRect(context, 150, 50, 50, 50, "red", 5, "blue");
+        drawRect(context, 250, 50, 50, 50, "green", 5, "red");
+        drawRect(context, 350, 50, 50, 50, "yellow", 5, "black");
+    }
 
-		}
-	</script>
-</body> 
+    function drawRect(cxt, x, y, width, height, fillColor, borderWidth, borderColor){
+        cxt.beginPath();
+        cxt.moveTo(x, y);
+        cxt.lineTo(x + width, y);
+        cxt.lineTo(x + width, y + height);
+        cxt.lineTo(x, y + height);
+        cxt.lineTo(x, y);
+        cxt.closePath();
 
+        cxt.lineWidth = borderWidth;
+        cxt.strokeStyle = borderColor;
+        cxt.fillStyle = fillColor;
+
+        cxt.fill();
+        cxt.stroke();
+    }
+</script>
+</body>
+</html>
+</body>
 </html>
