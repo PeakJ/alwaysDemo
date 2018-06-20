@@ -13,6 +13,8 @@
     <canvas id="canvas">
         你的浏览器居然不支持Canvas？！赶快换一个吧！！
     </canvas>
+    <button onclick="transImage()">转换为图片</button>
+    <img src="" id="canvasImg">
 </div>
 
 <script>
@@ -112,6 +114,12 @@
         cxt.closePath();
 
         cxt.fill();
+    }
+    function transImage(){
+    	var canvas = document.getElementById("canvas");
+    	var tempSrc = canvas.toDataURL("image/png");
+    	var imgDom = document.getElementById('canvasImg');
+    	imgDom.src = tempSrc;
     }
 </script>
 </body>
