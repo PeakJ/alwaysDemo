@@ -1,6 +1,6 @@
-function log(params) {
-    console.log(params);
-}
+// function log(params) {
+//     console.log(params);
+// }
 
 
 
@@ -16,9 +16,9 @@ function log(params) {
 // console.log(num.__proto__);
 // console.log(Function.prototype === Function.__proto__);
 
-var foo = function testPrototype() {
-    console.log(...arguments);
-}
+// var foo = function testPrototype() {
+//     console.log(...arguments);
+// }
 // console.log(foo.__proto__);
 // console.log(foo.prototype);
 // console.log(foo('ljgl', 666, null));
@@ -34,15 +34,28 @@ var foo = function testPrototype() {
 // };
 // log(bb === cc); // true
 
-function test(number) {
-    const arr = [2,'10',1,'20'];
-    arr.sort( (x,y) => x>y);
-    console.log(arr);
-}
+// function test(){
+//     const arr = ['sjglj','wonshg','jiangfeng','hello'];
+//     arr.splice(2,0,'hehe');
+//     console.log(arr);
+//     arr.splice(2,1);
+//     console.log(arr);
 
+// }
 // test();
-function Persion(params) {
-    
+
+function fn(a) {
+    console.log(a);
+    a = 1;
+    console.log(a);
+    var a = function() {
+        console.log(1);
+    }
+    console.log(a);
+
+    function a() {
+        console.log(2);
+    }
+    console.log(a);
 }
-var persion = new Persion();
-console.log(Object.prototype===persion.__proto__.__proto__);
+fn(3);
