@@ -3,7 +3,11 @@
 // }
 
 
-
+// window.testJsonp = function(data){
+//     console.log('调用了');
+//     console.log(data);
+    
+// }
 
 // var constru = new Date();
 // console.log(Object.prototype);
@@ -43,19 +47,3 @@
 
 // }
 // test();
-
-function fn(a) {
-    console.log(a);
-    a = 1;
-    console.log(a);
-    var a = function() {
-        console.log(1);
-    }
-    console.log(a);
-
-    function a() {
-        console.log(2);
-    }
-    console.log(a);
-}
-fn(3);

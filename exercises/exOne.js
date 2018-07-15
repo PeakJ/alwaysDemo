@@ -41,5 +41,5 @@ function isBalanced(str) {
 }
 const expression = "{()}{}[]";
 
-console.log(isBalanced(expression));
+// console.log(isBalanced(expression));
 
