@@ -19,20 +19,26 @@
 </style>
 
 <body>
-    <div style="width: 400px;">
-   <div style="float: left;width:100px;height:200px;background-color: brown;margin-right: 20px;"></div>
-   <p style="overflow: auto;">垃圾鼓励大家尴尬了几个古吉拉经过了解拉拉金刚狼了进来挂机啦了几个垃圾哦啊利率拉拉离开
-       的价格拉开了给jam了记得看过就就感觉案例登记管理局啊了的价格拉进来就
-       的价格拉开了给jam了记得看过就就感觉案例登记管理局啊了的价格拉进来就
-       的价格拉开了给jam了记得看过就就感觉案例登记管理局啊了的价格拉进来就
-       的价格拉开了给jam了记得看过就就感觉案例登记管理局啊了的价格拉进来就
-       的价格拉开了给jam了记得看过就就感觉案例登记管理局啊了的价格拉进来就
-       的价格拉开了给jam了记得看过就就感觉案例登记管理局啊了的价格拉进来就</p>
+    <div style="width: 400px;background-color: aquamarine;position: relative;">
+        <div style="width:30%;border:1px solid;display: inline-block;">
+            <div style="height: 300px;">
+                <div>左面文字</div>
+            </div>
+        </div>
+        <div style="width:30%;border:1px solid;display: inline-block;position: absolute;bottom: 0;top:0;">
+            <div style="height:100%;display: flex;align-items: center;justify-content: center;">
+                <div>右面文字</div>
+            </div>
+        </div>
     </div>
     <script>
         const expressionInTest = "{()}{}[]";
         // isBalanced 方法在exOne.js中，引入可直接使用
-        console.log('跨文件方法:' ,isBalanced(jfexpression));
+        console.log('跨文件方法:', isBalanced(expressionInTest));
+        // function isBalanced(str) {
+        //     console.log('文件内isBalanced方法会覆盖其他文件', str);
+        //     return str;
+        // }
     </script>
 </body>
 
