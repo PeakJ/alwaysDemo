@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "i just want to do that,don't bb",
   "main": "test.js",
-  "dependencies": {},
+  "dependencies": {
+    "lrz": "^4.9.40"
+  },
   "devDependencies": {
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.2",
