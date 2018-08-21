@@ -38,12 +38,15 @@
 // };
 // log(bb === cc); // true
 
-// function test(){
-//     const arr = ['sjglj','wonshg','jiangfeng','hello'];
-//     arr.splice(2,0,'hehe');
-//     console.log(arr);
-//     arr.splice(2,1);
-//     console.log(arr);
+// https://www.jianshu.com/u/6d92660a8cea?name=jiangfeng&age=18&sex=male
+function test(url,key){
+    var reg = new RegExp("(^|&)"+ key +"=([^&]*)(&|$)");
+    var paramStr = url.substr(url.indexOf('?')+1);
+    var r = paramStr.match(reg);
+    if(r!=null){
+        return  unescape(r[2]);
+    }
+    return null;
 
-// }
-// test();
+}
+console.log(test('https://www.jianshu.com/u/6d92660a8cea?name=jiangfeng&age=18&sex=male','name'));
