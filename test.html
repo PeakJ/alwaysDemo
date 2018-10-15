@@ -2,16 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"></meta>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-    <meta content="ie=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta charset="utf-8">
+    </meta>
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no," name="viewport">
+    </meta>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    </meta>
     <title>
         测试网页
     </title>
-    <link href="test.css" rel="stylesheet"></link>
+    <link href="test.css" rel="stylesheet">
+    </link>
     <script src="./exercises/exOne.js"></script>
     <script src="./exercises//exTwo.js"></script>
     <script src="test.js"></script>
+    <script src="./node_modules/vconsole/dist/vconsole.min.js"></script>
+    <script>
+        var vConsole = new VConsole();
+        function openVc() {
+            vConsole.showSwitch();
+        }
+        function closeVc() {
+            vConsole.hideSwitch();
+        }
+    </script>
     <!-- <script src="http://pay.ehaier.com/paycenter/pay/request.html?callback=testJsonp&orderSn='D3534369025'&num=2&channel='sg'&payType='ceb_fenqi'&callbackUrl='v3/h5/pay/callback.html'&memberId=24482837&cfgMark=435"></script> -->
 </head>
 <style>
@@ -47,11 +61,13 @@
             <input type="text" />
         </fieldset>
     </form>
-    <div id="container">
+    <div id="container" style="overflow:auto">
         <div class="left">定宽</div>
         <div class="center">自适应</div>
         <div class="right">定宽</div>
     </div>
+        <button onclick="openVc()">打开vconsole</button>
+        <button onclick="closeVc()">关闭vconsole</button>
     <script>
         const expressionInTest = "{()}{}[]";
         // isBalanced 方法在exOne.js中，引入可直接使用

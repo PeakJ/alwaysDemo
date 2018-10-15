@@ -4,7 +4,8 @@
   "description": "i just want to do that,don't bb",
   "main": "test.js",
   "dependencies": {
-    "lrz": "^4.9.40"
+    "lrz": "^4.9.40",
+    "vconsole": "^3.2.0"
   },
   "devDependencies": {
     "css-loader": "^0.28.11",
