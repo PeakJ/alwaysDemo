@@ -3,16 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    </meta>
-    <meta content="width=device-width, initial-scale=1.0, user-scalable=no," name="viewport">
-    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"></meta>
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    </meta>
     <title>
         测试网页
     </title>
-    <link href="test.css" rel="stylesheet">
-    </link>
+    <script src="./node_modules/amfe-flexible/index.js"></script>
+    <link href="test.css" rel="stylesheet"/> 
+    <link rel="stylesheet" href="temp/remStyle.css"/>
     <script src="./exercises/exOne.js"></script>
     <script src="./exercises//exTwo.js"></script>
     <script src="test.js"></script>
@@ -68,6 +66,7 @@
     </div>
         <button onclick="openVc()">打开vconsole</button>
         <button onclick="closeVc()">关闭vconsole</button>
+        <div class="test-rem"></div>
     <script>
         const expressionInTest = "{()}{}[]";
         // isBalanced 方法在exOne.js中，引入可直接使用
