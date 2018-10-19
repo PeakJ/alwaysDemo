@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var pxtorem = require('postcss-pxtorem');
-gulp.task('default', function () {
+gulp.task('default',['css'], function () {
     // 将你的默认的任务代码放在这
 });
 gulp.task('css', function () {
@@ -18,7 +18,8 @@ gulp.task('css', function () {
             minPixelValue: 0
         })
     ];
-    return gulp.src('remStyle.css')
+    gulp.src('remStyle.css')
         .pipe(postcss(plugins))
         .pipe(gulp.dest('temp'));
 });
+gulp.watch('remStyle.css',['css']);
