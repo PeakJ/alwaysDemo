@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>测试vue的translation</title>
+    <link rel="stylesheet" href="../css/animate.css">
+    <style>
+        .toggle-button {
+            background-color: aquamarine;
+            width: 50%;
+            margin: 20px auto;
+            text-align: right;
+        }
+
+        .toggle-pan {
+            background-color: blueviolet;
+            width: 80%;
+            height: 100%;
+            margin: -20px auto 0 auto;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        @-webkit-keyframes slideIn {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+
+            50% {
+                height: 50%;
+                opacity: .5;
+            }
+
+
+            to {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+
+            50% {
+                height: 50%;
+                opacity: .5;
+            }
+
+
+            to {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+
+
+        .slideIn {
+            -webkit-animation-name: slideIn;
+            animation-name: slideIn;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        @-webkit-keyframes slideOut {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+
+            50% {
+                height: 50%;
+                opacity: .5;
+            }
+
+
+            to {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                height: 100%;
+                opacity: 1;
+            }
+
+            50% {
+                height: 50%;
+                opacity: .5;
+            }
+
+
+            to {
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        .slideOut {
+            -webkit-animation-name: slideOut;
+            animation-name: slideOut;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:title="testData" class="toggle-button">
+            <button v-on:click="toggle()">toggle</button>
+        </div>
+        <div v-bind:style="{height:myHeight+ 'px'}">
+            <transition enter-active-class="animated slideIn" leave-active-class="animated slideOut">
+                <div class="toggle-pan" v-show="isShow">
+                </div>
+                </translation>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                testData: 666,
+                isShow: false,
+                myHeight: 100,
+            },
+            mounted: function () {
+                console.log('vue component mounted');
+                this.isShow = false;
+                this.test();
+            },
+            methods: {
+                test: function () {
+                    console.log(this.testData);
+                },
+                toggle: function () {
+                    console.log('点击了！');
+                    this.isShow = !this.isShow;
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>
