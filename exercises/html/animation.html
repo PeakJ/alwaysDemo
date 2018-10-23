@@ -129,9 +129,29 @@
                 </div>
                 </translation>
         </div>
+        <button-counter :base-num="20"></button-counter>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
+         Vue.component('button-counter', {
+            data: function () {
+                return {
+                    count: 0
+                }
+            },
+        props:{
+            baseNum:Number,
+        },
+            computed:{
+                add:function(){
+                    return  this.count+this.baseNum;
+                }
+            },
+            template: `<div>
+                <button v-on:click="count++">You clicked me {{ add }} times.</button>
+                <div>基数：{{baseNum}}</div>
+                </div>`
+        });
         new Vue({
             el: '#app',
             data: {
@@ -153,7 +173,8 @@
                     this.isShow = !this.isShow;
                 },
             }
-        })
+        });
+       
     </script>
 </body>
 
