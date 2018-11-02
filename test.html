@@ -11,8 +11,8 @@
     <script src="./node_modules/amfe-flexible/index.js"></script>
     <link href="test.css" rel="stylesheet"/> 
     <link rel="stylesheet" href="temp/remStyle.css"/>
-    <script src="./exercises/exOne.js"></script>
-    <script src="./exercises//exTwo.js"></script>
+    <script src="./exercises/js/exOne.js"></script>
+    <script src="./exercises/js/exTwo.js"></script>
     <script src="test.js"></script>
     <script src="./node_modules/vconsole/dist/vconsole.min.js"></script>
     <script>
@@ -75,6 +75,11 @@
         //     console.log('文件内isBalanced方法会覆盖其他文件', str);
         //     return str;
         // }
+        console.log('clientWidth:',document.documentElement.clientWidth);
+        window.addEventListener('pageshow', function(event) {
+         console.log('pageshow:');
+         console.log(event);
+});
     </script>
     <!-- <script src="https://gist.github.com/PeakJ/21a47bf2a804d8bb77ca55fa9071d9fa.js"></script> -->
 </body>
