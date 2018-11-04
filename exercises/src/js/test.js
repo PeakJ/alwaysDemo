@@ -1,13 +1,13 @@
-// function log(params) {
-//     console.log(params);
-// }
+function log(params) {
+    console.log(params);
+}
 
 
-// window.testJsonp = function(data){
-//     console.log('调用了');
-//     console.log(data);
+window.testJsonp = function(data){
+    console.log('调用了');
+    console.log(data);
     
-// }
+}
 
 // var constru = new Date();
 // console.log(Object.prototype);
@@ -49,4 +49,4 @@ function test(url,key){
     return null;
 
 }
-console.log(test('https://www.jianshu.com/u/6d92660a8cea?name=jiangfeng&age=18&sex=male','name'));
+console.log(test('https://www.jianshu.com/u/6d92660a8cea?name=peakj&age=18&sex=male','name'));
