@@ -15,12 +15,12 @@
 </head>
 <style>
     body {
-        width: 100%;
+        padding: 20px 17px 80px 17px;
     }
 </style>
 
 <body>
-    <div style="width: 400px;background-color: aquamarine;position: relative;">
+    <div style="width: 300px;background-color: aquamarine;position: relative;">
         <div style="width:30%;border:1px solid;display: inline-block;">
             <div style="height: 300px;">
                 <div>
@@ -54,17 +54,25 @@
     <button onclick="openVc()">打开vconsole</button>
     <button onclick="closeVc()">关闭vconsole</button>
     <div class="test-rem"></div>
+    <hr/>
+    <span>这是一段仅供复制的文字</span><button id="copyBtn" data-clipboard-text="这是一段仅供复制的文字">复制</button>
+
+
+
+
+
     <script src="./node_modules/vconsole/dist/vconsole.min.js"></script>
-   <script src="./exercises/dist/all.js"></script>
+    <script src="./exercises/dist/all.js"></script>
+    <script src="./lib/clipboard/dist/clipboard.min.js"></script>
     <script>
-            var vConsole = new VConsole();
-            function openVc() {
-                vConsole.showSwitch();
-            }
-            function closeVc() {
-                vConsole.hideSwitch();
-            }
-        </script>
+        var vConsole = new VConsole();
+        function openVc() {
+            vConsole.showSwitch();
+        }
+        function closeVc() {
+            vConsole.hideSwitch();
+        }
+    </script>
     <script>
         const expressionInTest = "{()}{}[]";
         // isBalanced 方法在exOne.js中，引入可直接使用
@@ -79,6 +87,7 @@
             console.log(event);
         });
     </script>
+    <script src="./exercises/src/js/test.js"></script>
     <!-- <script src="https://gist.github.com/PeakJ/21a47bf2a804d8bb77ca55fa9071d9fa.js"></script> -->
 </body>
 
