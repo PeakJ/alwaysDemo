@@ -1,7 +1,10 @@
+:root{
+    --commonColor: #1fb27f
+}
 .test-rem{
     width:200px;
     height: 40px;
-    background-color: blueviolet;
+    background-color: var(--commonColor);
     margin: 0 auto;
     font-size: 16px;
 }
