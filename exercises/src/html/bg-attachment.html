@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css滚动视差</title>
+    <style>
+        .box{
+            text-align: center;
+            color: #ffffff;
+            font-size: 47px;
+        }
+        .bg{
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            line-height: 100vh;  
+        }
+        .bg-one{
+            background-image: url('../images/image1.jpg');
+        }
+        .bg-two{
+            background-image: url('../images/image2.jpg');
+        }
+        .bg-three{
+            background-image: url('../images/image3.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <section class="bg-one bg">
+            <span>第一张背景图</span>
+        </section>
+        <section class="bg-two bg"><span>第二张背景图</span></section>
+        <section class="bg-three bg"><span>第三张背景图</span></section>
+    </div>
+</body>
+</html>
