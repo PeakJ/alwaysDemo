@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打开微信</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="toweixin()">打开微信</button>
+    </div>
+    <script>
+       function toweixin() {
+        if (!/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            if (/ baiduboxapp/i.test(navigator.userAgent)) {
+                window.location.replace('bdbox://utils?action=sendIntent&minver=7.4&params=%7B%22intent%22%3A%22weixin://%23wechat_redirect%23Intent%3Bend%22%7D')
+            } else {
+                window.location.replace('weixin://')
+            }
+        } else {
+            window.location.replace('weixin://')
+        }
+    }
+    </script>
+</body>
+
+</html>
