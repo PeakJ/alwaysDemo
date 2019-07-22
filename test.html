@@ -58,7 +58,9 @@
     <div class="test-rem"></div>
     <hr />
     <span>这是一段仅供复制的文字</span><button id="copyBtn" data-clipboard-text="这是一段仅供复制的文字">复制</button>
-
+    <div>
+        <button onClick="testShare()">点击测试web share api</button>
+    </div>
 
 
     <script src="./node_modules/vconsole/dist/vconsole.min.js"></script>
@@ -96,6 +98,21 @@
             navigator.getBattery().then(function (res) {
                 console.log('设备电量', res.level * 100)
             })
+        }
+        function testShare() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'WebShare API Demo',
+                    url: 'https://peakj.github.io/',
+                    text: '分享的内容质量决定传播的速度和广度'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                    .catch(console.error);
+            } else {
+                // fallback don't support
+                console.log('不支持web share api')
+            }
         }
     </script>
 </body>
