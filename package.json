@@ -15,7 +15,7 @@
     "autoprefixer": "^9.5.0",
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-pixrem": "^1.0.0",
